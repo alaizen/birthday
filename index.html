@@ -12,7 +12,7 @@
       <img id="cake-svg-img" src="img/cake.png" alt="Birthday Cake">
       <canvas id="cake-candle-canvas"></canvas>
 
-      <div class="greeting-card" id="greeting-card">
+      <div class="greeting-card" id="greeting-card" style="display:none;">
         <div id="lottie-confetti" style="width:320px;max-width:90vw;margin:0 auto;"></div>
 
         <!-- متن‌ها و دکمه زیر کیک -->
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <button class="btn-main" id="blow-instruction">Click to blow the candle!</button>
+    <button class="btn-main" onclick="goNext()">Click to blow the candle!</button>
 
     <p style="margin-top: 20px;">Make a wish 🎈</p>
     <h2 style="margin-top: 5px;">Click the button to celebrate 🎉</h2>
@@ -39,8 +39,24 @@
 
   <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
   <script src="js/candle_on_cake.js"></script>
+
+<script>
+  function goNext() {
+    // Hide cake section
+    document.getElementById("cake-container").style.display = "none";
+
+    // Show greeting card (already exists in your HTML)
+    document.getElementById("greeting-card").style.display = "block";
+
+    // Play birthday audio if present
+    const audio = document.getElementById("birthday-audio");
+    if (audio) audio.play().catch(() => {});
+  }
+</script>
+
 </body>
 </html>
+
 
 
 

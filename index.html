@@ -41,13 +41,18 @@
 
 <script>
   function goNext() {
-    // Hide cake section
+    // Hide cake
     document.getElementById("cake-container").style.display = "none";
 
-    // Show greeting card (already exists in your HTML)
+    // Show greeting card
     document.getElementById("greeting-card").style.display = "block";
 
-    // Play birthday audio if present
+    // SHOW the messages (THIS WAS MISSING)
+    document.getElementById("congrats-message").style.display = "block";
+    document.getElementById("celebrate-message").style.display = "block";
+    document.getElementById("reset-btn").style.display = "inline-block";
+
+    // Play birthday music
     const audio = document.getElementById("birthday-audio");
     if (audio) audio.play().catch(() => {});
   }
@@ -55,6 +60,7 @@
 
 </body>
 </html>
+
 
 
 

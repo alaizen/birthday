@@ -314,9 +314,11 @@ window.onload = function() {
 // CLICK BASED BLOW (NO MIC)
 // ===============================
 
-const blowBtn = document.getElementById("blow-instructions");
+document.addEventListener("DOMContentLoaded", () => {
+  const blowBtn = document.getElementById("blow-instruction");
 
-if (blowBtn) {
+  if (!blowBtn) return;
+
   blowBtn.addEventListener("click", () => {
     // Hide button
     blowBtn.style.display = "none";
@@ -344,10 +346,9 @@ if (blowBtn) {
       audio.play().catch(() => {});
     }
 
-    // Confetti animation (already defined in your file)
+    // Confetti animation
     if (typeof launchConfetti === "function") {
       launchConfetti();
     }
   });
-}
-
+});

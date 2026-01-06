@@ -314,7 +314,7 @@ window.onload = function() {
 // CLICK BASED BLOW (NO MIC)
 // ===============================
 
-const blowBtn = document.getElementById("blow-instruction");
+const blowBtn = document.getElementById("blow-instructions");
 
 if (blowBtn) {
   blowBtn.addEventListener("click", () => {
@@ -350,3 +350,4 @@ if (blowBtn) {
     }
   });
 }
+

@@ -15,9 +15,29 @@
       and a birthday as special as you ✨
     </p>
 
-    <audio autoplay controls style="margin-top:30px;">
-      <source src="audio/birthday.mp3" type="audio/mpeg">
-    </audio>
+<button id="playBtn"
+        style="margin-top:30px;padding:14px 28px;border-radius:999px;
+               border:none;font-size:16px;cursor:pointer;">
+  ▶ Tap to play music
+</button>
+
+<audio id="bg-music" preload="auto">
+  <source src="audio/birthday.mp3" type="audio/mpeg">
+</audio>
+
   </div>
+
+<script>
+  const btn = document.getElementById('playBtn');
+  const music = document.getElementById('bg-music');
+
+  btn.addEventListener('click', () => {
+    music.volume = 1;
+    music.play().then(() => {
+      btn.style.display = 'none';
+    });
+  });
+</script>
+
 </body>
 </html>

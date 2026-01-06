@@ -31,7 +31,8 @@
         </div>
       </div>
 
-    <button class="btn-main" onclick="location.href='celebrate.html'">Click to blow the candle!</button>
+    <a href="celebrate.html" class="btn-main" style="display:inline-block;text-decoration:none;">Click to blow the candle!</a>
+
 
 
     <p style="margin-top: 20px;">Make a wish 🎈</p>
@@ -39,30 +40,6 @@
   </div>
 
   <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
-
-<script>
-  function goNext() {
-    // Hide cake
-    document.getElementById("cake-container").style.display = "none";
-
-    // Show greeting card
-    document.getElementById("greeting-card").style.display = "block";
-
-    // SHOW the messages (THIS WAS MISSING)
-    document.getElementById("congrats-message").style.display = "block";
-    document.getElementById("celebrate-message").style.display = "block";
-    document.getElementById("reset-btn").style.display = "inline-block";
-
-    // Play birthday music
-    const audio = document.getElementById("birthday-audio");
-    if (audio) audio.play().catch(() => {});
-  }
-</script>
-
-</body>
-</html>
-
-
 
 
 
